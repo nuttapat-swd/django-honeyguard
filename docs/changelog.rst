@@ -10,6 +10,19 @@ and this project adheres to `Semantic Versioning <https://semver.org/spec/v2.0.0
 
    For detailed version history, see the GitHub releases page.
 
+[Unreleased] - 2025-11-27
+-------------------------
+
+Added
+~~~~~
+
+* Regression test that runs ``makemigrations --check --dry-run`` to guard against missing migration files.
+
+Fixed
+~~~~~
+
+* Added the missing ``0002`` migration so ``HoneyGuardLog`` schema changes no longer trigger "unapplied migrations" warnings at runtime.
+
 [1.0.0] - 2025-11-03
 ------------
 
