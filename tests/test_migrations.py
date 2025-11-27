@@ -1,7 +1,7 @@
 """Regression tests for django-honeyguard migrations."""
 
-from django.core.management import call_command
 import pytest
+from django.core.management import call_command
 
 
 @pytest.mark.django_db
@@ -16,5 +16,6 @@ def test_models_aligned_with_migrations():
         )
     except SystemExit:
         pytest.fail(
-            "Pending model changes detected. Run `python manage.py makemigrations`"
+            "Pending model changes detected."
+            "Run `python manage.py makemigrations`"
         )
